@@ -12,23 +12,25 @@ public class MixerMenager : MonoBehaviour
     private const float MaxVolume = 0;
     private const float MinVolume = -80;
 
+    private float _volumeRation = 20;
+    
     private float _masterVolumeCount;
     private bool _isMusikOn = true;
 
     public void ChangeMasterVolume(float velue)
     {
-        _masterVolumeCount = Mathf.Log10(velue) * 20;
+        _masterVolumeCount = Mathf.Log10(velue) * _volumeRation;
         _audioMixer.audioMixer.SetFloat(Master, _masterVolumeCount);
     }
 
     public void ChangeSoundsVolume(float velue)
     {
-        _audioMixer.audioMixer.SetFloat(Sound, Mathf.Log10(velue) * 20);
+        _audioMixer.audioMixer.SetFloat(Sound, Mathf.Log10(velue) * _volumeRation);
     }
 
     public void ChangeBackgroundMusikVolume(float velue)
     {
-        _audioMixer.audioMixer.SetFloat(BachgroundMusik, Mathf.Log10(velue) * 20);
+        _audioMixer.audioMixer.SetFloat(BachgroundMusik, Mathf.Log10(velue) * _volumeRation);
     }
 
     public void ToggleSounds()
