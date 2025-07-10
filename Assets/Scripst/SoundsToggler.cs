@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class ToggleSound : MonoBehaviour
+public class SoundsToggler : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
 
