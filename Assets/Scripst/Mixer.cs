@@ -9,13 +9,6 @@ public class Mixer : MonoBehaviour
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private Groups _groupName;
 
-    private enum Groups
-    {
-        Master,
-        Sounds,
-        Background
-    }
-
     private float _volumeRation = 20;
 
     public void ChangeVolume(float velue)

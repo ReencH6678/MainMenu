@@ -7,13 +7,6 @@ public class SoundsToggler : MonoBehaviour
 
     [SerializeField] private Groups _group;
 
-    private enum Groups
-    {
-        Master,
-        Sounds,
-        Background
-    }
-
     private const float MinVolume = -80;
 
     private float _currentVolumeCount;
