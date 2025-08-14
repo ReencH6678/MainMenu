@@ -3,11 +3,10 @@ using UnityEngine.Audio;
 
 public class SoundsToggler : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _audioMixer;
-
-    [SerializeField] private Groups _group;
-
     private const float MinVolume = -80;
+
+    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private Groups _group;
 
     private float _currentVolumeCount;
     private bool _isOn = true;

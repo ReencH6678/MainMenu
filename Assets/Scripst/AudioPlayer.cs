@@ -8,7 +8,17 @@ public class AudioPlayer : MonoBehaviour
 
     private void Awake()
     {
+        _playButton = GetComponent<Button>();
+    }
+
+    private void OnEnable()
+    {
         _playButton.onClick.AddListener(Play);
+    }
+
+    private void OnDisable()
+    {
+        _playButton.onClick.RemoveListener(Play);
     }
 
     private void Play()

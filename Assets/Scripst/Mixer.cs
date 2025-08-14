@@ -13,7 +13,9 @@ public class Mixer : MonoBehaviour
 
     public void ChangeVolume(float velue)
     {
-        Debug.Log(_groupName.ToString());
-        _audioMixer.SetFloat(_groupName.ToString(), Mathf.Log10(velue) * _volumeRation);
+        if (velue != 0)
+            _audioMixer.SetFloat(_groupName.ToString(), Mathf.Log10(velue) * _volumeRation);
+        else
+            _audioMixer.SetFloat(_groupName.ToString(), MinVolume);
     }
 }
